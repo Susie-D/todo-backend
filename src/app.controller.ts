@@ -12,8 +12,6 @@ export class AppController {
 
   @Post('/name')
   async addName(@Body('name') name: string) {
-    this.appService.addName(name);
-    console.log('RESPONSE:', name);
-    return name;
+    return this.appService.addName(name);
   }
 }
